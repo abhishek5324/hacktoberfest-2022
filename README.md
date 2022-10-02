@@ -14,3 +14,4 @@ hacktoberfest is a month-long celebration of open source software run by Digital
 ## Contributors
 - [Abhishek Bansal](https://github.com/abhishek5324)
 - [Princy Gupta](https://github.com/Princy-Gupta)
+- [Harshil Sharma](https://github.com/harshilsharmaa)
