@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice Form</title>
+</head>
+<style>
+    *{
+        box-sizing:border-box;
+    }
+    body{
+        margin: 10px 400px;
+    }
+    main{
+        background-color: rgba(238, 247, 255, 0.795);
+        padding: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(104, 99, 99, 0.308);
+        border-radius: 3px;
+    }
+    header{
+        background-color: rgb(69, 128, 10);
+        color: white;
+        padding: 2px 25px;
+        white-space:normal;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        line-height: .1%;
+    }
+    .bold{
+        font-size: 30px;
+    }
+    .low{
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        background-color: rgb(69, 128, 10);
+        font-weight: 500;
+        padding: 10px;
+        color: white;
+        border: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover{
+        color: black;
+    }
+</style>
+<body>
+    <div>
+        <header>
+            <p class="bold">Contact Form</p>
+            <P class="low">Please fill all the text in the fields</P>
+        </header>
+        <main>
+            <p>Your Name:<input type="text"name="Name" placeholder="Your Full Name"></p>
+            <p>Your Email:<input type="email" name="Email" placeholder="Valid Email Address"></p>
+            <p>Messege:<textarea name="Address" rows="7" cols="25" placeholder="Your Messege to us"></textarea></p>
+            <p>Subject:<input type="text" name="Subject" placeholder="Job Inquiry"></p>
+            <input type="submit" value="Send">
+        </main>
+    </div>
+</body>
+</html>
