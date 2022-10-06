@@ -19,3 +19,5 @@ hacktoberfest is a month-long celebration of open source software run by Digital
 - [Princy Gupta](https://github.com/Princy-Gupta)
 - [Harshil Sharma](https://github.com/harshilsharmaa)
 - [Disco Dvl](https://github.com/discodevl)
+- [Ankeeta Sahoo](https://github.com/sahooankeeta)
+- [Aditya Dey](https://github.com/AdityaDey4)
