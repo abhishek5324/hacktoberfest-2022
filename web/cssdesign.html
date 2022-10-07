@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Payment Form</title>
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 30px;
+            font-size: 15px;
+            padding: 20px;
+        }
+        .style{
+            background-color: rgb(255, 242, 224);
+            padding: 20px;
+            border: 2px solid orange;
+            border-radius: 8px;
+        }    
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="password"],
+        select,textarea{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(240, 224, 255);
+            border-radius: 5px;
+            margin: 10px;
+        }
+        #gender{
+            padding: 4px;
+            border: 1px solid rgb(240, 224, 255);
+            border-radius: 5px;
+             background-color: white;
+        }
+        .main{
+            text-align: center;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background-color:rgb(93, 250, 216) ;
+           font-size: 15px;
+           font-weight: 800;
+           padding: 12px 20px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            color: indigo;
+        }
+    </style>
+    <body>
+        <div class="style">
+            <h1 class="main"><b>Payment Form</b></h1>
+        <fieldset><h2>Basic Details:-</h2></fieldset>
+        <p>Name: *<input type="text"  required name="Name" placeholder="Aditya Dey"></p>
+        <hr>
+        <p id="gender">
+            <legend><b>Gender:</b></legend>
+            <br>
+            Male<input type="radio"name="Gender"id="1">
+            Female<input type="radio"name="Gender"id="2">
+           Others<input type="radio"name="Gender"id="3">
+        </p>
+        <hr>
+        <p>
+            Address: <textarea name="address"name="Address"rows="5"cols="130" placeholder="Enter Your Addresss"></textarea>
+        </p>
+        <hr>
+        <p>
+            Email: *<input type="email"name="Email required">
+        </p>
+        <hr>
+        <p>
+            Pincode: *<input type="number"name="Pincode required">
+        </p>
+        <fieldset><h2>Payment Details:-</h2></fieldset>
+        <p>
+            Mode *:
+            <select name="Mode_Name"required>
+            <option value="">>--Select a ModeType--<</option>
+            <option value="Visa">Paytm</option>
+            <option value="Rupay">Phonepay</option>
+            <option value="Mastercard">Net Bamking</option>
+            <option value="Mastercard">Amazon Pay</option>
+            </select>
+        </p>
+        <hr>
+        <p>
+            Phone Number: *<input type="ph_number"name="Number" required>
+        </p>
+        <hr>
+        <p>
+            Password: *<input type="password" required>
+        </p>
+        <hr>
+        <p>
+            Date:<input type="date"name="Date">
+        </p>
+        <hr>
+        <p>
+            <input type="submit"Name="Submit">
+        </p>
+        </div>
+    </body>
+</html>
