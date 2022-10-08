@@ -1,0 +1,51 @@
+public class Histogram {
+
+    public static void main(String[] args){
+        int[] arr = {8,5,3,4,8,3};
+
+        int ans = 0;
+        int[] ps = ps(arr);
+        int[] ns = ns(arr);
+
+        for(int i = 0; i<arr.length; i++){
+            int a = (ns[i]-ps[i]-1)*arr[i];
+            ans = Math.max(ans,a);
+        }
+        System.out.println(ans);
+
+    }
+
+    public static int[] ps(int[] arr){
+        //[-1, -1, 1, 1, -1, 4, 5]
+        Stack<Integer> stack = new Stack<>();
+        int[] ans = new int[arr.length];
+
+        for(int i = 0; i<arr.length; i++){
+            while(!stack.isEmpty() && arr[stack.peek()] >= arr[i]){
+                stack.pop();
+            }
+            int a = (stack.isEmpty() ? -1 : stack.peek());
+            ans[i] = a;
+            stack.push(i);
+        }
+        return ans;
+    }
+
+    public static int[] ns(int[] arr){
+        Stack<Integer> stack = new Stack<>();
+        int[] ans = new int[arr.length];
+//        stack.push(arr[arr.length-1]);
+//        ans[arr.length-1] = arr.length-1;
+
+        for(int i = arr.length-1; i>=0; i--){
+            while(!stack.isEmpty() && arr[stack.peek()]>=arr[i]){
+                stack.pop();
+            }
+            int a = (stack.isEmpty() ? arr.length : stack.peek());
+            ans[i] = a;
+            stack.push(i);
+        }
+        return ans;
+    }
+
+}
