@@ -21,3 +21,4 @@ hacktoberfest is a month-long celebration of open source software run by Digital
 - [Disco Dvl](https://github.com/discodevl)
 - [Ankeeta Sahoo](https://github.com/sahooankeeta)
 - [Nikhil solomon](https://github.com/nikhilSolomon)
+- [Luc Allaire](https://github.com/wolf-361)
