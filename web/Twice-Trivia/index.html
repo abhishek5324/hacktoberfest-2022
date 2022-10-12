@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+
+    <script>
+        // Run script after DOM is loaded
+        window.addEventListener('DOMContentLoaded', function () {
+
+            // Check for correct answer
+            // Declarations
+            let correct = document.querySelector('.correct');
+            let incorrect = document.querySelectorAll('.incorrect');
+            let feedback1 = document.querySelector('#feedback1');
+            let triviaPressed = false;
+
+            // Trivia color reset function
+            function triviaColorReset() {
+                correct.style.backgroundColor = '';
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].style.backgroundColor = '';
+                }
+                feedback1.innerHTML = '';
+                feedback1.style.color = '';
+                triviaPressed = false;
+            }
+
+            // Change correct button to green
+            function triviaCorrectColor() {
+                correct.style.backgroundColor = 'rgb(0, 255 ,0 ,0.3)';
+                feedback1.innerHTML = 'Correct!';
+                feedback1.style.color = 'rgb(0, 255 ,0 ,0.4)';
+                triviaPressed = true;
+            }
+
+            // Change incorrect nutton to red
+            function triviaIncorrectColor(i) {
+                incorrect[i].style.backgroundColor = '#CF6679';
+                feedback1.innerHTML = 'Incorrect';
+                feedback1.style.color = '#CF6679';
+                triviaPressed = true;
+            }
+
+            // If correct, change button to green
+            correct.addEventListener('click', function () {
+                if (triviaPressed === true) {
+                    triviaColorReset();
+                }
+                triviaCorrectColor();
+            });
+
+            // If incorrect, change button to red            
+            for (let i = 0; i < incorrect.length; i++) {
+                incorrect[i].addEventListener('click', function () {
+                    if (triviaPressed === true) {
+                        triviaColorReset();
+                    }
+                    triviaIncorrectColor(i);
+                });
+            }
+
+            // Check free response
+            document.querySelector('#submit').addEventListener('click', function () {
+                let input = document.querySelector('input');
+                let feedback2 = document.querySelector('#feedback2');
+                if (input.value === 'Japanese') {
+                    input.style.backgroundColor = 'rgb(0, 255 ,0 ,0.3)';
+                    feedback2.innerHTML = 'Correct!';
+                    feedback2.style.color = 'rgb(0, 255 ,0 ,0.4)';
+                } else {
+                    input.style.backgroundColor = '#CF6679';
+                    feedback2.innerHTML = 'Incorrect';
+                    feedback2.style.color = '#CF6679';
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <!-- Add multiple choice question here -->
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3>What is the year of birth of Sana from TWICE ?</h3>
+
+            <button class="incorrect" type="button">1990</button>
+            <button class="correct" type="button">1996</button>
+            <button class="incorrect" type="button">2001</button>
+
+            <p id='feedback1'></p>
+
+        </div>
+
+        <div class="section">
+            <!-- Add free response question here -->
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What is Sana's Nationality?</h3>
+
+            <input type="text">
+            <button id='submit'>Check Answer</button>
+
+            <p id=feedback2></p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
